@@ -1,0 +1,49 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - gratidute
+  - recommend_for_the_movie_name
+  - recommend_for_the_actor
+  - recommend_for_the_director
+  - recommend_for_the_genre
+  - recommend_for_the_years
+  - recommend_for_the_imdb
+  - recommend_for_the_country
+  - recommend_for_the_runtime
+
+entities:
+  - movie
+  - actor
+  - director
+  - min_imdb
+  - country
+  - runtime
+  - min_year
+  - genre
+
+actions:
+  - action_movie_name
+  - action_for_the_actor
+  - action_for_the_director
+  - action_for_the_genre
+  - action_for_the_years
+  - action_for_the_imdb
+  - action_for_the_country
+  - action_for_the_runtime
+
+responses:
+  utter_greet:
+    - text: "Merhaba seni gördüğüme sevindim\nSana nasıl yardımcı olabilirim?"
+    - text: "Selam bugün harika görünüyorsun\nNasıl bir film önermemi istersin?"
+    - text: "Hoşgeldin ben film asistanın FilmKılavuzu. Sana nasıl yardımcı olabilirim?"
+
+  utter_gratidute:
+    - text: "Rica ederim. Sana başka yardımcı olabileceğim bir konu var mı?"
+    - text: "Yardımcı olabildiysem ne mutlu. Başka istediğin film önerisi?"
+
+  utter_goodbye:
+    - text: "Güle güle kendine iyi davran :)"
+    - text: "Bye bye görüşmek üzere"
+    - text: "Hoşçakal tekrar beklerim :))"
