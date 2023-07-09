@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: ne zaman goodbye intenti gelirse kullanıcıya veda et
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye

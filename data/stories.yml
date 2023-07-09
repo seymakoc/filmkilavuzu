@@ -1,0 +1,75 @@
+version: "3.1"
+
+stories:
+
+- story: örnek film
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: recommend_for_the_movie_name
+    - action: action_movie_name
+    - intent: gratidute
+    - action: utter_gratidute
+
+- story: türe göre
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: recommend_for_the_genre
+    - action: action_for_the_genre
+    - intent: gratidute
+    - action: utter_gratidute
+
+- story: imdb puanı
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: recommend_for_the_imdb
+    - action: action_for_the_imdb
+    - intent: gratidute
+    - action: utter_gratidute
+
+- story: oyuncuya göre
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: recommend_for_the_actor
+    - action: action_for_the_actor
+    - intent: gratidute
+    - action: utter_gratidute
+
+- story: yönetmene göre
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: recommend_for_the_director
+    - action: action_for_the_director
+    - intent: gratidute
+    - action: utter_gratidute
+
+- story: yıla göre
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: recommend_for_the_years
+    - action: action_for_the_years
+    - intent: gratidute
+    - action: utter_gratidute
+
+- story: ülkeye göre
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: recommend_for_the_country
+    - action: action_for_the_country
+    - intent: gratidute
+    - action: utter_gratidute
+
+- story: süreye göre
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: recommend_for_the_runtime
+    - action: action_for_the_runtime
+    - intent: gratidute
+    - action: utter_gratidute

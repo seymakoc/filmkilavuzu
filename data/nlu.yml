@@ -1,1 +1,151 @@
+version: "3.1"
 
+nlu:
+- intent: greet
+  examples: |
+    - Merhaba
+    - Selam
+    - Naber
+    - Hello
+    - Slm
+    - La
+    - Hii
+    - Günaydın
+    - Selamlar
+    - Selam!
+    - whatsup!
+    - Hey
+    - selamün aleyküm
+    - Nasılsın?
+    - merhabalar nasılsınız?
+    - N'aber?
+    - ne haber
+
+- intent: goodbye
+  examples: |
+    - Güle güle
+    - Hoşça kal
+    - Sonra görüşürüz
+    - Teşekkürler bu kadardı
+    - Kendine iyi bak
+    - Görüşürüz
+    - Bye bye
+    - byess
+    - Bye
+    - Benden bu kadar
+    - Yok
+    - Şimdilik hayır, teşekkür ederim
+    - Yardımın için sağol ama yok
+    - başka bir şey yok bye bye
+    - Bu kadarı yeterli yardımların için teşekkürler
+    - Sanırım bu kadar sonra tekrar isterim öneri
+    - Şimdilik bu kadardı istediğim öneri.   
+    
+
+- intent: gratidute
+  examples: |
+    - Önerilerin için teşekkürler
+    - Film tavsiyelerin için sağol
+    - thnk uu
+    - thnx
+    - Teşekkürler
+    - Sağolasın
+    - Yardımın için sağol
+    - Film önerin için teşekkür ederim
+    - Her şey için teşekkür ederim
+    - Yardımlarından ötürü teşekkür ederim
+    - Thank you
+
+- intent: recommend_for_the_movie_name
+  examples: |
+    - Bana [Guardian of The Galaxy](movie) benzeri filmler öner
+    - [Esaretin Bedeli](movie) benzeri filmler izlemek istiyorum, ne önerirsin?
+    - Favori filmim [The Shawshank Redemption](movie) gibi film önersene
+    - Bana [Otostopçunun Galaksi Rehberi](movie) gibi filmleri getir
+    - [Me Before You](movie) tarzı film izlemek istiyorum öneri?
+    - [The Batman](movie) filmine benzer filmler sence neler?
+    - [Ironman](movie) gibi izleyebileceğim film var mı hiç?
+    - Benim için [suicide Squad](movie) tarzı filmler bulabilir misin?
+    - Bana [The Avengers](movie) gibi filmler bulsana rica etsem    
+
+- intent: recommend_for_the_actor
+  examples: |
+    - [Johnny Depp](actor) filmleri nedir
+    - [Robert Downey Jr.](actor)'ün oynadığı filmlerden öneri verir misin?
+    - [Taylor Swift](actor)ün bulunduğu filmler neler
+    - İzlemek için bana [Johnny Depp](actor)ün içinde bulunduğu filmleri önerir misin?
+    - Bana [Chris Hemsworth](actor)'ün içinde bulunduğu filmlerden bazılarını getir
+    - Benim için cast listesinde [Tom Holland](actor)'ün de olduğu filmleri bulabilir misin?
+    - Oyuncularının arasında [Tarık Akan](actor) bulunduğu filmler neler hnagilerini önerirsin?
+    - [Adile Naşit](actor)'ü izlemek istiyorum. Filmlerinden birazını getirebilir misin?
+    - Bana [Kemal Sunal](actor) ün de bulunduğu filmleri bul.  
+
+- intent: recommend_for_the_director
+  examples: |
+    - [Christopher Nolan](director)'ün yönettiği filmler
+    - Yönetmeni [Virgina Woolf](director) olan filmlerden izlemek istiyorum. Öneri??
+    - [Tim Burton](director) yönettiği filmlerden önerir misin?
+    - Bana yönetmenin [tim burton](director) olduğu filmleri getir
+    - Yönetmeni [Chris Nolan](director) olan film önerisi alabilir miyim?
+    - Benim için [Tim Burton](director)'ün filmlerini bulabilir misin?
+    - İzlemek için yönetmeni [Tom Hanks](director) olan filmler getir lütfen
+
+- intent: recommend_for_the_genre
+  examples: |
+    - [Dram](genre) türünde film önerir misin?
+    - Bana [komedi](genre) türünde filmler getirir misin?
+    - İzlemeye [romantik](genre) türünde film önerilerin neler?
+    - Ben [fantastik](genre) türünde film izlemek istiyorum.
+    - [Bilim kurgu](genre) türünde filmlerden öneri getirir misin?
+    - Bana [tarih](genre) türünde nasıl filmler önerirsin?
+    - Bana [komedi](genre) türünde film önerisi verebilir misin rica etsem?
+    - [Romantik](genre) türünde film izlemek için hangi filmleri önerirsin
+    - Bana [komedi](genre) türünde film getir    
+
+- intent: recommend_for_the_years
+  examples: |
+    - Bana [2000](min_year) yıllarından sonra yapılan filmleri önerir misin?
+    - [1996](min_year) ve sonrası arası filmler neler?
+    - [2005](min_year) ve sonrasındaki yıllar arasındaki filmlerden önersene
+    - [1998](min_year) çekilmiş filmlerden en iyileri neler sence
+    - Benim için [1855](min_year) sonrasında çekilmiş filmlerden öneri bulsana.
+    - Bana [2015](min_year) yıllarından sonra çekilmiş filmlerden en iyilerini getir.
+    - [2014](min_year) ve sonrası güzel izleyebileceğim filmler neler  
+
+- intent: recommend_for_the_imdb
+  examples: |
+    - [5.0](min_imdb) ve üstü puanda olan filmlerden izlemek istiyorum önerileri alayım?
+    - [8.5](min_imdb) puan üstü filmler neler?
+    - Bana imdb puanı en az [6.8](min_imdb) olan filmlerden öner
+    - Benim için minimum [7.5](min_imdb) puanında olan filmlerden neler izleyebileceğimi bulabilir misin?
+    - [3.5](min_imdb) ve üstünde puan almış filmler neler? En güzelleri hangileri
+    - Bana en az [6.4](min_imdb) puanına sahip film öner
+    - [8.9](min_imdb) ve daha fazla puana sahip olan filmlerden önerebileceğin filmler hangileri?
+    - Sence [7](min_imdb) ve üstü puanlı filmlerden hangisini izlemeliyim?
+    - Bana en az [9.5](min_imdb) veya daha fazlasına sahip filmlerden bul
+    - [6.4](min_imdb) veya daha fazla puanı olan filmler neler
+
+- intent: recommend_for_the_country
+  examples: |
+    - [ABD](country) yapımı filmler neler?
+    - [Fransa](country) ülkesinde çekilen filmlerden önerilerin neler?
+    - Bana ülkesi [Fransa](country) olan filmlerden önerebilir misin?
+    - [İtalya](country)'de çekilmiş olan filmlerden sence hangisini izlemeliyim?
+    - Benim için [Türkiye](country) de yapılmış filmlerden ne izleyebilirim bulabilir misin?
+    - Bana yapım ülkesi [Nijerya](country) olan film önersene
+    - Yapım ülkesi [Monaco](country) olan filmlerden sence hangisini izlemeliyim
+    - [Yunanistan](country)'de çekilmiş filmleri bul
+    - [İtalya](country)'da çekilen filmlerden hangilerini önerirsin?
+    - Benim için [Fransa](country)'da çekilmiş olan filmlerden öneri bulabilir misin?
+
+- intent: recommend_for_the_runtime
+  examples: |
+    - Bana [180](runtime) dk ve altı filmler önersene
+    - [250](runtime) dakika ve altı filmlerden bana izlenebilecek önerir misin?
+    - Ben [777](runtime) altı film izlemek istiyorum
+    - [111](runtime) dakika kadar boş zamanı doldurabilecek filmler neler?
+    - [90](runtime) dakika ve daha az sürede biten filmlerden öneri lütfen
+    - Benim için maximum [125](runtime) dakika olan filmlerden öneri bul
+    - En fazla [250](runtime) süren filmler neler
+    - İzleyebileceğim [145](runtime) ve altında süren filmler neler ne önerirsin?
+    - Bana max en fazla [223](runtime) dakika süren film bul
